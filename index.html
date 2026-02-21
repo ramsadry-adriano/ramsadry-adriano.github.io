@@ -3,7 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAM's Adry | Portfolio Technique</title>
+  
+  <title>RAM'S ADRY | Ingénierie, Tech & Innovation</title>
+  <meta name="description" content="Portfolio professionnel de RAM'S ADRY (Adriano). Expert en informatique (Python, C), traitement du signal, microcontrôleurs et maintenance mécanique.">
+  <meta name="keywords" content="RAM'S ADRY, Adriano, Ingénierie, Python, Microcontrôleurs, Traitement du signal, Maintenance, ramsadry.com">
+  <link rel="canonical" href="https://ramsadry.com/">
+  
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+  <meta property="og:title" content="RAM'S ADRY | Portfolio Technique">
+  <meta property="og:description" content="Découvrez mes expertises en Tech, Signaux et Innovation.">
+  <meta property="og:url" content="https://ramsadry.com/">
+  <meta property="og:image" content="https://ramsadry.com/profil/profil.jpg">
+  <meta property="og:type" content="website">
   
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -55,7 +67,7 @@
     nav {
       position: sticky;
       top: 0;
-      background: rgba(var(--bg-main), 0.8);
+      background: rgba(10, 10, 10, 0.8);
       backdrop-filter: blur(10px);
       padding: 20px;
       display: flex;
@@ -161,8 +173,6 @@
       transition: var(--transition);
     }
 
-    .media-card:hover img { transform: scale(1.1); }
-
     .media-info { padding: 15px; }
     .media-info h4 { font-size: 1rem; color: var(--accent-red); margin-bottom: 5px; }
     .media-info p { font-size: 0.85rem; color: var(--text-dim); }
@@ -180,7 +190,6 @@
     input, textarea { width: 100%; padding: 12px; margin-bottom: 15px; background: var(--gray-light); border: none; color: var(--text-main); border-radius: 5px; }
     .btn-submit { background: var(--accent-red); color: white; border: none; padding: 12px; width: 100%; font-weight: bold; cursor: pointer; border-radius: 5px; }
 
-    /* --- NOUVEAUX STYLES FOOTER --- */
     footer {
       background: var(--bg-card);
       padding: 50px 10% 30px;
@@ -221,113 +230,111 @@
   <button id="theme-toggle" aria-label="Changer de thème"><i class="fas fa-adjust"></i></button>
 
   <header class="hero" id="home">
-    <img src="profil/profil.jpg" alt="Adriano" class="profile-img">
+    <img src="profil/profil.jpg" alt="Adriano - RAM'S ADRY" class="profile-img">
     <h1>RAM'S <span>ADRY</span></h1>
-    <p style="color: var(--text-dim); letter-spacing: 2px;">TECH & INNOVATION</p>
+    <p style="color: var(--text-dim); letter-spacing: 2px; font-weight: 600;">INGÉNIERIE & INNOVATION TECH</p>
   </header>
 
   <nav>
     <a href="#home">Accueil</a>
-    <a href="#skills">Compétences</a>
+    <a href="#skills">Expertises</a>
     <a href="#videos">Vidéos</a>
-    <a href="#galerie">Galerie</a>
+    <a href="#galerie">Projets</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="skills">
-    <h2 class="section-title">Expertises</h2>
+    <h2 class="section-title">Mes Domaines d'Expertise</h2>
     <div class="grid">
       <div class="skill-card">
         <i class="fas fa-laptop-code"></i>
         <h3>Informatique</h3>
         <ul>
-          <li>C, Python (Image)</li>
-          <li>HTML/CSS, Multimédia</li>
+          <li>C, Python (Traitement Image)</li>
+          <li>HTML/CSS, Développement Web</li>
           <li>Réseaux & Systèmes</li>
         </ul>
       </div>
       <div class="skill-card">
         <i class="fas fa-wave-square"></i>
-        <h3>Signaux</h3>
+        <h3>Signaux & Électronique</h3>
         <ul>
           <li>Traitement & Radar</li>
-          <li>Microcontrôleurs</li>
+          <li>Programmation Microcontrôleurs</li>
           <li>Électricité appliquée</li>
         </ul>
       </div>
       <div class="skill-card">
         <i class="fas fa-car-side"></i>
-        <h3>Mécanique</h3>
+        <h3>Génie Mécanique</h3>
         <ul>
-          <li>Auto Mécanique</li>
-          <li>Maintenance</li>
+          <li>Maintenance Automobile</li>
+          <li>Systèmes automatisés</li>
           <li>Bases Ingénierie</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <section id="videos" style="background: rgba(45, 45, 45, 0.1);">
+  <section id="videos" style="background: rgba(45, 45, 45, 0.05);">
     <h2 class="section-title">Démonstrations Vidéo</h2>
     <div class="grid">
         <div class="media-card">
         <div class="video-container">
-          <video controls>
-            <source src="videos/demo.mp4" type="video/mp4">
+          <video controls poster="images/poster-video.jpg">
+            <source src="videos/démo.mp4" type="video/mp4">
           </video>
         </div>
         <div class="media-info">
-          <h4>Démonstration globale</h4>
-          <p>Algorithme Python pour la reconnaissance de formes.</p>
+          <h4>Démonstration Algorithmique</h4>
+          <p>Utilisation de Python pour la reconnaissance de formes en temps réel.</p>
         </div>
       </div>
     </div>
   </section>
 
   <section id="galerie">
-    <h2 class="section-title">Galerie Projets</h2>
+    <h2 class="section-title">Galerie de Réalisations</h2>
     <div class="grid">
-      
       <div class="media-card">
         <div class="img-container">
-          <img src="images/circuit.jpg" alt="Conception PCB">
+          <img src="images/circuit.jpg" alt="Conception PCB Adriano">
         </div>
         <div class="media-info">
           <h4>Conception PCB</h4>
-          <p>Vue rapprochée d'un montage microcontrôleur personnalisé.</p>
+          <p>Design et soudure de circuits pour microcontrôleurs.</p>
         </div>
       </div>
 
       <div class="media-card">
         <div class="img-container">
-          <img src="images/meca.jpg" alt="Maintenance Auto">
+          <img src="images/meca.jpg" alt="Maintenance Mécanique">
         </div>
         <div class="media-info">
-          <h4>Maintenance Auto</h4>
-          <p>Intervention sur système d'injection moteur.</p>
+          <h4>Maintenance & Auto</h4>
+          <p>Optimisation et diagnostic de systèmes mécaniques.</p>
         </div>
       </div>
 
       <div class="media-card">
         <div class="img-container">
-          <img src="images/animation.jpg" alt="Animation Événementielle">
+          <img src="images/Animation.png" alt="Gestion Événementielle">
         </div>
         <div class="media-info">
-          <h4>Événementiel</h4>
-          <p>Animation et gestion technique d'une conférence.</p>
+          <h4>Régie & Événementiel</h4>
+          <p>Gestion technique et sonorisation de conférences.</p>
         </div>
       </div>
-
     </div>
   </section>
 
   <section id="contact">
-    <h2 class="section-title">Contact</h2>
+    <h2 class="section-title">Me Contacter</h2>
     <div class="contact-form">
       <form action="mailto:ramsadry3@gmail.com" method="POST" enctype="text/plain">
-        <input type="text" name="name" placeholder="Nom" required>
+        <input type="text" name="name" placeholder="Votre Nom" required>
         <input type="email" name="email" placeholder="Votre Email" required>
-        <textarea name="message" rows="4" placeholder="Votre message technique ou projet..." required></textarea>
+        <textarea name="message" rows="4" placeholder="Décrivez votre projet technique..." required></textarea>
         <button type="submit" class="btn-submit">ENVOYER L'E-MAIL</button>
       </form>
     </div>
@@ -335,10 +342,10 @@
 
   <footer>
     <div class="footer-socials">
-      <a href="mailto:ramsadry3@gmail.com" title="Envoyer un mail"><i class="fas fa-envelope"></i></a>
-      <a href="https://linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:ramsadry3@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/ramsadry-adriano" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/ramsadry-adriano" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://ramsadry.com" target="_blank" title="Recherche Google"><i class="fab fa-google"></i></a>
     </div>
     
     <p class="footer-copyright">
@@ -347,14 +354,12 @@
   </footer>
 
   <script>
-    // Gestion du thème
     const toggleBtn = document.getElementById('theme-toggle');
     toggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('light-mode');
     });
 
-    // Animation d'entrée des sections
-    const observerOptions = { threshold: 0.15 };
+    const observerOptions = { threshold: 0.1 };
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -366,8 +371,8 @@
 
     document.querySelectorAll('section').forEach(section => {
       section.style.opacity = '0';
-      section.style.transform = 'translateY(30px)';
-      section.style.transition = '0.8s ease-out';
+      section.style.transform = 'translateY(40px)';
+      section.style.transition = '1s cubic-bezier(0.4, 0, 0.2, 1)';
       observer.observe(section);
     });
   </script>
