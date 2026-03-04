@@ -7,9 +7,9 @@
   <title>RAM'S ADRY | Ingénierie, Tech & Innovation</title>
   <meta name="description" content="Portfolio professionnel de RAM'S ADRY (Adriano). Expert en informatique (Python, C), traitement du signal, microcontrôleurs et maintenance mécanique.">
   <meta name="keywords" content="RAM'S ADRY, Adriano, Ingénierie, Python, Microcontrôleurs, Traitement du signal, Maintenance, ramsadry.com">
-  <link rel="canonical" href="https://ramsadry.com/">
   
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  <link rel="canonical" href="https://www.ramsadry.com/">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.ramsadry.com/sitemap.xml">
 
   <meta property="og:title" content="RAM'S ADRY | Portfolio Technique">
   <meta property="og:description" content="Découvrez mes expertises en Tech, Signaux et Innovation.">
@@ -24,10 +24,10 @@
     :root {
       --bg-main: #0a0a0a;
       --bg-card: #1a1a1a;
-      --accent-red: #e63946;
+      --accent-red: #e74099;
       --text-main: #e5e5e5;
       --text-dim: #a0a0a0;
-      --gray-light: #2d2d2d;
+      --gray-light: #2d2d3e;
       --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -181,15 +181,12 @@
       width: 100%;
       padding-top: 56.25%;
       background: #000;
-      cursor: zoom-in;
     }
 
     .video-container video {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
     }
 
     .img-container {
@@ -255,7 +252,7 @@
       font-family: 'Orbitron', sans-serif;
     }
 
-    /* --- NOUVEAUX STYLES POUR LE PLEIN ÉCRAN --- */
+    /* Lightbox Overlay */
     #media-overlay {
       display: none;
       position: fixed;
@@ -272,8 +269,6 @@
       max-width: 90%;
       max-height: 85%;
       border-radius: 10px;
-      box-shadow: 0 0 30px rgba(0,0,0,0.5);
-      cursor: default;
     }
 
     .close-btn {
@@ -282,12 +277,8 @@
       right: 35px;
       color: white;
       font-size: 40px;
-      font-weight: bold;
       cursor: pointer;
-      transition: 0.3s;
     }
-
-    .close-btn:hover { color: var(--accent-red); }
 
     @media (max-width: 600px) { section { padding: 50px 5%; } nav { gap: 10px; } }
   </style>
@@ -368,7 +359,7 @@
   </section>
 
   <section id="galerie">
-    <h2 class="section-title">Réalisations du projet</h2>
+    <h2 class="section-title">Réalisations & Projets</h2>
     <div class="grid">
       <div class="media-card">
         <div class="img-container">
@@ -385,18 +376,18 @@
           <img src="images/meca.jpg" alt="Maintenance Mécanique">
         </div>
         <div class="media-info">
-          <h4>Maintenance & Présentation </h4>
-          <p>Réalusation des systèmes Embarquer </p>
+          <h4>Systèmes Embarqués</h4>
+          <p>Réalisation et maintenance de systèmes électroniques.</p>
         </div>
       </div>
 
       <div class="media-card">
         <div class="img-container">
-          <img src="images/logo.jpg" alt="Gestion Événementielle">
+          <img src="images/Logo.png" alt="Designer Logo">
         </div>
         <div class="media-info">
-          <h4>Designer</h4>
-          <p>Création logo personnel</p>
+          <h4>Design & Branding</h4>
+          <p>Création d'identité visuelle et logo personnel.</p>
         </div>
       </div>
     </div>
@@ -420,7 +411,6 @@
       <a href="https://www.linkedin.com/in/ramsadry-adriano" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
       <a href="https://github.com/ramsadry-adriano" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
       <a href="Adriano.pdf" target="_blank" title="Consulter mon CV"><i class="fas fa-file-pdf"></i></a>
-      <a href="https://www.ramsadry.com" target="_blank" title="Recherche Google"><i class="fab fa-google"></i></a>
     </div>
     
     <p class="footer-copyright">
@@ -435,46 +425,26 @@
       document.body.classList.toggle('light-mode');
     });
 
-    // Gestion de l'affichage plein écran (Lightbox)
+    // Lightbox
     const overlay = document.getElementById('media-overlay');
     const overlayContent = document.getElementById('overlay-content');
     const closeBtn = document.querySelector('.close-btn');
-
-    // Sélection de tous les éléments médias cliquables
-    const clickables = document.querySelectorAll('.img-container img, .video-container video');
+    const clickables = document.querySelectorAll('.img-container img');
 
     clickables.forEach(el => {
-      el.addEventListener('click', (e) => {
-        // Empêcher le clic de se propager s'il y a des contrôles vidéo
-        e.stopPropagation();
-        
+      el.addEventListener('click', () => {
         overlayContent.innerHTML = '';
         const clone = el.cloneNode(true);
-        
-        // Configuration spécifique si c'est une vidéo
-        if (el.tagName === 'VIDEO') {
-          clone.setAttribute('controls', 'true');
-          clone.removeAttribute('poster'); // Optionnel: pour voir la vidéo direct
-        }
-        
         overlayContent.appendChild(clone);
         overlay.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // Bloquer le scroll
       });
     });
 
-    // Fermer l'overlay
-    const closeOverlay = () => {
-      overlay.style.display = 'none';
-      overlayContent.innerHTML = '';
-      document.body.style.overflow = 'auto'; // Réactiver le scroll
-    };
-
+    const closeOverlay = () => { overlay.style.display = 'none'; };
     overlay.addEventListener('click', closeOverlay);
     closeBtn.addEventListener('click', closeOverlay);
 
-    // Animations d'apparition des sections
-    const observerOptions = { threshold: 0.1 };
+    // Scroll Animation
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -482,12 +452,12 @@
           entry.target.style.transform = 'translateY(0)';
         }
       });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
     document.querySelectorAll('section').forEach(section => {
       section.style.opacity = '0';
       section.style.transform = 'translateY(40px)';
-      section.style.transition = '1s cubic-bezier(0.4, 0, 0.2, 1)';
+      section.style.transition = '1s ease-out';
       observer.observe(section);
     });
   </script>
